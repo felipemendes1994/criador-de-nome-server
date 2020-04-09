@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    network_mode: "host"
+    environment:
+      POSTGRES_DB: namegator
+      POSTGRES_USER: namegator
+      POSTGRES_PASSWORD: namegator
+    ports: 
+      - "5432:5432"
+    volumes:
+      - /var/lib/postgresql/data:/var/lib/postgresql/data
